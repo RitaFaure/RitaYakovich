@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form2</title>
+  </head>
+  <body>
+    <h1 align="center">Заполните анкету</h1>
+    <form
+      name="form1"
+      method="POST"
+      action="http://fe.it-academy.by/TestForm.php"
+      target="_blank"
+    >
+      <fieldset>
+        <legend>Личные данные</legend>
+        <input
+          type="text"
+          id="review_familyname"
+          maxlength="25"
+          name="review_familyname"
+          placeholder="Фамилия"
+          pattern="^[А-ЯЁ][а-яё]+[\-\s]?){3,}"
+          required
+          autofocus
+        /><br />
+        <input
+          type="text"
+          id="review_firstname"
+          maxlength="20"
+          name="review_firstname"
+          placeholder="Имя"
+          pattern="^[А-ЯЁ][а-яё]+[\-\s]?){3,}"
+          required
+        /><br />
+        <input
+          type="text"
+          id="review_fathersname"
+          maxlength="24"
+          name="review_fathersname"
+          placeholder="Отчество"
+          pattern="^[А-ЯЁ][а-яё]+[\-\s]?){3,}"
+          required
+        /><br />
+        <fieldset>
+          <legend>Паспортные данные</legend>
+          <input
+            type="text"
+            id="passport_series"
+            name="passport_series"
+            placeholder="AA"
+            pattern="[A-Z]{2}"
+            size="5"
+            maxlength="2"
+            required
+          />
+          <input
+            type="text"
+            id="passport_number"
+            name="passport_number"
+            placeholder="1234567"
+            pattern="[0-9]{7}"
+            maxlength="7"
+            required
+          /><br />
+        </fieldset>
+        <fieldset>
+          <legend>Дата рождения</legend>
+          <input
+            type="text"
+            id="birth_year"
+            name="birth_year"
+            placeholder="1980"
+            pattern="[0-9]{4}"
+            size="5"
+          />
+          <br />
+          <select name="dropdown_months" id="dropdown_months">
+            <option value="0" selected>Январь</option>
+            <option value="1">Февраль</option>
+            <option value="2">Март</option>
+            <option value="3">Апрель</option>
+            <option value="4">Май</option>
+            <option value="5">Июнь</option>
+            <option value="6">Июль</option>
+            <option value="7">Август</option>
+            <option value="8">Сентябрь</option>
+            <option value="9">Октябрь</option>
+            <option value="10">Ноябрь</option>
+            <option value="11">Декабрь</option></select
+          ><br />
+          <input type="number" min="1" max="31" step="1" />
+        </fieldset>
+        <select name="dropdown_nationalite" id="dropdown_nationalite" required>
+          <option value="0">РБ</option>
+          <option value="1">РФ</option>
+          <option value="2">Другое</option></select
+        ><br />
+        <span>Адрес:</span><br />
+        <textarea></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Интересы</legend>
+        <fieldset>
+          <legend>Хобби</legend>
+          <input type="checkbox" name="hobby[] value="hobby_option1"
+          id="hobby_option1">
+          <label for="hobby_option1">Рыбалка</label><br />
+          <input type="checkbox" name="hobby[] value="hobby_option2"
+          id="hobby_option2">
+          <label for="hobby_option2">Астрономия</label><br />
+          <input type="checkbox" name="hobby[] value="hobby_option3"
+          id="hobby_option3">
+          <label for="hobby_option3">Дайвинг</label><br />
+          <input type="checkbox" name="hobby[] value="hobby_option4"
+          id="hobby_option4">
+          <label for="hobby_option4">Марки</label><br />
+        </fieldset>
+        <fieldset>
+          <legend>Домашние животные</legend>
+          <select
+            multiple
+            name="dropdown_multiple"
+            id="dropdown_multiple"
+            size="12"
+          >
+            <optgroup label="Попугаи">
+              <option value="1">Волнистый</option>
+              <option value="2">Ара</option>
+              <option value="3">Неразлучник</option>
+            </optgroup>
+            <optgroup label="Рыба">
+              <option value="4">Караси</option>
+              <option value="5">Окуни</option>
+              <option value="6">Осетр</option>
+            </optgroup>
+            <optgroup label="Птицы">
+              <option value="7">Стая ворон</option>
+              <option value="8">Аист</option>
+              <option value="9">Археоптерикс</option>
+            </optgroup>
+          </select>
+        </fieldset>
+      </fieldset>
+      <fieldset>
+        <legend>Данные для входа и восстановления пароля</legend>
+        <input
+          type="text"
+          id="login"
+          name="login"
+          size="20"
+          maxlength="20"
+          placeholder="Логин"
+          pattern="[A-Za-z]{5,}"
+          required
+        />
+        <label for="login">Логин</label><br />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          size="20"
+          maxlength="20"
+          placeholder="Пароль"
+          pattern="[A-Za-z]{10,}"
+          required
+          autocomplete="off"
+        />
+        <label for="password">Пароль</label><br />
+      </fieldset>
+      <fieldset>
+        <legend>Координаты</legend>
+        <input
+          type="email"
+          name="review_email"
+          id="review_email"
+          required
+          placeholder="введите адрес почты"
+          pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
+        />
+        <label for="review_email">email</label><br />
+        <input
+          type="url"
+          name="website_name"
+          id="website_name"
+          placeholder="введите адрес сайта"
+          pattern="^((https?|ftp)\:\/\/)?([a-z0-9]{1})((\.[a-z0-9-])|([a-z0-9-]))*\.([a-z]{2,6})(\/?)$"
+        />
+        <label for="website_name">url</label>
+      </fieldset>
+      <fieldset>
+        <legend>Цифры</legend>
+        <input type="number" min="-2.5" max="2.5" step="0.1" /><br />
+        <input type="range" min="1" max="10" />
+      </fieldset>
+      <fieldset>
+        <legend>Кнопки управления</legend>
+        <input type="submit" value="Отправить" />
+        <input type="reset" value="Сбросить" /><br />
+        <input type="image" src="download.jpeg" />
+      </fieldset>
+    </form>
+  </body>
+</html>
