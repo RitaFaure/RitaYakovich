@@ -1,0 +1,20 @@
+.normal {
+    list-style-type: upper-roman;
+}
+.normal_li {
+list-style-type: upper-roman;
+}
+ol {
+    list-style-type: lower-roman;
+}
+li
+{
+    list-style-type: lower-roman;
+}
+.wrapper {
+    width: 400px;
+    background-color: black;
+    color: green;
+    max-height: 4;
+    overflow: scroll;
+}

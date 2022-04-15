@@ -1,0 +1,22 @@
+body {
+    width: 750px;
+}
+
+header {
+    text-align: right;
+}
+.adress {
+    font-style: italic;
+
+}
+#recepient {
+    font-family: 'Bad Script', cursive, monospace;
+    font-style: x-large;
+    font-weight: bold;
+    text-indent: 10mm;
+}
+.Cover_letter {
+font-family: 'Bad Script', cursive, monospace;
+font-style: italic;
+text-indent: 5mm;
+}
