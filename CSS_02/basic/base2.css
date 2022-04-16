@@ -13,8 +13,9 @@ li
 }
 .wrapper {
     width: 400px;
+    height: 60px;
     background-color: black;
     color: green;
-    max-height: 4;
-    overflow: scroll;
+    display: inline-block;
+    overflow-y: auto;
 }
