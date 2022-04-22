@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>days</title>
+    <style>
+      @media all and (max-width: 1950px) {
+        div.MenuLevel1 {
+          display: inline-flex;
+        }
+        div.MenuLevel1 > div {
+          width: 100px;
+          height: 30px;
+          background-color: grey;
+          border: solid black 1px;
+          position: relative;
+          cursor: pointer;
+        }
+        div.MenuLevel2 > div {
+          background-color: lightgrey;
+          border: solid black 1px;
+          cursor: pointer;
+        }
+        div.MenuLevel2 {
+          width: 150px;
+          display: none;
+        }
+        .MenuLevel2 {
+          opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
+          transition: 1s; /*Скорость перехода состояния элемента*/
+          animation: show 3s 1; /* Указываем название анимации, её время и количество повторов*/
+          animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+          animation-delay: 1s; /* Задержка перед началом */
+        }
+        @keyframes show {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        div.MenuLevel1 > div:hover div.MenuLevel2 {
+          display: block;
+          position: absolute;
+          top: 100%;
+          z-index: 1;
+        }
+      }
+      @media all and (max-width: 620px) {
+        div.MenuLevel1 {
+          display: grid;
+          width: 150px;
+        }
+        div.MenuLevel1 > div:hover div.MenuLevel2 {
+          display: block;
+          position: absolute;
+          left: 80%;
+          top: 90%;
+          z-index: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <div class="MenuLevel1">
+      <div>
+        Понедельник
+        <div class="MenuLevel2">
+          <div>Завртак</div>
+          <div>Обед</div>
+          <div>Ужин</div>
+        </div>
+      </div>
+      <div>
+        Вторник
+        <div class="MenuLevel2">
+          <div>Завртак</div>
+          <div>Обед</div>
+          <div>Ужин</div>
+        </div>
+      </div>
+      <div>
+        Среда
+        <div class="MenuLevel2">
+          <div>Завртак</div>
+          <div>Обед</div>
+          <div>Ужин</div>
+        </div>
+      </div>
+      <div>
+        Четверг
+        <div class="MenuLevel2">
+          <div>Завртак</div>
+          <div>Обед</div>
+          <div>Ужин</div>
+        </div>
+      </div>
+      <div>
+        Пятница
+        <div class="MenuLevel2">
+          <div>Завртак</div>
+          <div>Обед</div>
+          <div>Ужин</div>
+        </div>
+      </div>
+      <div>
+        Суббота
+        <div class="MenuLevel2">
+          <div>Завртак</div>
+          <div>Обед</div>
+          <div>Ужин</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

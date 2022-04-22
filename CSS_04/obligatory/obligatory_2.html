@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>таблица с сотрудниками</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 2px solid white;
+        border-spacing:5px 1px; 
+        margin:20px;
+        width: auto;
+
+      }
+      td,
+      th {
+        padding: 5px;
+        border: 2px dotted grey;
+      }
+      tr:nth-child(odd) {
+        background-color: lightgrey;
+      }
+      tr:nth-child(odd):hover {
+        background-color: aqua;
+      }
+
+      tr:nth-child(even) {
+        background-color: whitesmoke;
+      }
+      tr:nth-child(even):hover {
+        background-color: darkblue;
+      }
+      tr:nth-child(1) {
+        background-color: grey;
+      }
+      tr:nth-child(1):hover {
+        background-color: yellow;
+      }
+      caption {
+        text-align: center;
+        caption-side: bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <caption>
+        ДАННЫЕ О СОТРУДНИКАХ
+      </caption>
+      <tr>
+        <th>ФИО</th>
+        <th>пол</th>
+        <th>должность</th>
+        <th>дата рожд</th>
+        <th>данные 01</th>
+        <th>данные 02</th>
+      </tr>
+      <tr>
+        <th>Оплпмл алтлао иаат</th>
+        <td>М</td>
+        <td>начальник</td>
+        <td>01.01.1960</td>
+        <td>2423</td>
+        <td>2324</td>
+      </tr>
+      <tr>
+        <th>лдлооо ллол лоол</th>
+        <td>Ж</td>
+        <td>секретарь</td>
+        <td>01.05.1967</td>
+        <td>67548</td>
+        <td>54054</td>
+      </tr>
+      <tr>
+        <th>адл алтвтдь табтьв</th>
+        <td>Ж</td>
+        <td>бухгалтер</td>
+        <td>06.05.1967</td>
+        <td>433433</td>
+        <td>234355</td>
+      </tr>
+      <tr>
+        <th>ккп акпкп пкпкуп</th>
+        <td>М</td>
+        <td>водитель</td>
+        <td>02.09.1978</td>
+        <td>87960584</td>
+        <td>906789546</td>
+      </tr>
+      <tr>
+        <th>амам аам амаиав</th>
+        <td>М</td>
+        <td>водитель 2</td>
+        <td>22.32.3232</td>
+        <td>222222</td>
+        <td>532432234234</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,6 +1,8 @@
 .container {
     background-color: rgb(161, 194, 226);
     width: 75em;
+    overflow-y: auto;
+
 }
 .Navigation {
 width: 15em;
@@ -15,10 +17,14 @@ color: black;
 float: left;
 width: 60em;
 margin-bottom: .2em;
+overflow-y: auto;
+
 }
 footer {
     background-color: rgb(220, 200, 200);
     clear: both;
+    overflow-y: auto;
+
 }
 img {
     float: right;
